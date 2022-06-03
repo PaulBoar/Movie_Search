@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import MovieItem from './MovieItem';
 
 import classes from './Movies.module.css';
 
@@ -12,9 +13,12 @@ function Movies({ movies }) {
     setMoviesList(movies);
   }, [movies]);
 
-  return <div>
+  return <div className={classes.container}>
    <ul>
-    {moviesList.map(movie => {console.log(movie.title)})}
+    {moviesList.map(movie => {
+     {console.log(movie)}
+     return <MovieItem title={movie.title} img={movie.image} description={movie.description} />
+    })}
    </ul>
   </div>;
 }

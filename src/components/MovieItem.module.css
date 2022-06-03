@@ -1,0 +1,6 @@
+.movie_item {
+ display: flex;
+ background-color: rgb(161, 161, 161);
+ min-height: 10rem;
+ width: 10rem;
+}
